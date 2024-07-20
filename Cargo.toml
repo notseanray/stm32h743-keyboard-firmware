@@ -5,7 +5,7 @@ authors = ["Sean Ray <seanray410@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-stm32h7xx-hal = { version = "0.16.0", features = ["stm32h743", "usb_hs", "rt"] }
+stm32h7xx-hal = { version = "0.16.0", features = ["stm32h743", "usb_hs", "rt", "example-ldo"] }
 cortex-m = "0.7"
 cortex-m-rt = { version = "0.7", features = ["device"] }
 panic-halt = "0.2.0"
