@@ -1,0 +1,28 @@
+[package]
+name = "keyberon-f4"
+version = "0.1.0"
+authors = ["Sean Ray <seanray410@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+stm32h7xx-hal = { version = "0.16.0", features = ["stm32h743", "usb_hs", "rt"] }
+cortex-m = "0.7"
+cortex-m-rt = { version = "0.7", features = ["device"] }
+panic-halt = "0.2.0"
+keyberon = { git = "https://github.com/TeXitoi/keyberon" }
+cortex-m-rtic = "1"
+usb-device = "0.3.0"
+usbd-serial = "0.2.2"
+arraydeque = { version = "0.5.1", default-features = false }
+serde = { version = "1.0.204", default-features = false, features = ["derive"] }
+num-format = { version = "0.4.4", default-features = false }
+analog-multiplexer = "1.0.2"
+spi-memory = "0.2.0"
+heapless = "0.8.0"
+
+[profile.release]
+lto = true
+incremental = false
+opt-level = "z"
+debug = true
+
